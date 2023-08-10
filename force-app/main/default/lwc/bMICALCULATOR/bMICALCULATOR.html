@@ -5,14 +5,18 @@
             <h1>
                 BMI calculator
             </h1>
-
+            <template if:true={result}>
             <section>
                 <h2>your bmi value </h2>
-                <div class="result-value">here value will come</div>
+                <div class="result-value">{bmivalue}</div>
                 <h2>so you are</h2>
-                <div class="result-value">results will come here</div>
-                <button class="slds-button slds-button_neutral slds-button_stretch  custom-button slds-var-m-bottom_large" onclick={recalculate}>re-calculate</button>
+                <div class="result-value">{result}</div>
+                <button class="slds-button slds-button_neutral slds-button_stretch  
+                custom-button slds-var-m-bottom_large" onclick={recalculate}>re-calculate</button>
             </section>
+            </template>
+
+            <template if:false={result}>
             <form  onsubmit= {submithandler}> 
                 
                 <div class="slds-form-element slds-var-bottom_medium">
@@ -20,7 +24,8 @@
                       for="text-input-height"> height cm
                     </label>
                     <div class="slds-form-element__control">
-                     <input type="number" id="text-input-height" placeholder="enter your height cm" min="0" required class="slds-input"  name="height" value="height" onchange={inputhandler}/>
+                     <input type="number" id="text-input-height" placeholder="enter your height cm" 
+                     min="0" required class="slds-input"  name="height" value="height" onchange={inputhandler}/>
                     </div>
                       
                 </div>
@@ -36,6 +41,7 @@
 
                 <button class="slds-button slds-button_neutral slds-button_stretch  custom-button slds-var-m-bottom_large">calculate</button>
             </form> 
+        </template>
 
             <div class="info-wrapper">
                 <h2>what is your bmi means</h2>

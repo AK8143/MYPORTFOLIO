@@ -43,7 +43,12 @@ if (this.bmivalue < 18.5) {
   console.log('bmi value:', this.bmivalue);
   console.log('bmi result:',this.result);
 }
-recaculate(){
+recalculate(){
+  this.height=''
+  this.weight=''
+ this.bmivalue=''
+ this.result=''
+  
     
 }
 }
