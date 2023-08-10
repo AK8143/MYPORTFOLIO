@@ -69,3 +69,9 @@ input{padding: 8px;
 
 
  }
+ .result-value{
+color: var( --light-blue);
+font-size: 30px;
+ }
+
+ 
